@@ -60,7 +60,7 @@ In the figure above we are answering the question, how does the relationship bet
 
 Observation: As we have seen in the MI scores, fuel_type has a relatively low score. But from the plot, we can see that two price populations are seperated by fuel_type with trends within the horsepower feature. This indicates that fuel_type contributes an interaction effect and might be important also.
 
-Action-> We can create another feature that has an interaction between horsepower and fuel_type (either addition, multiplication, or some other approach, we can verify which interaction works best by observing the MI score of the new feature.
+Action-> We can create another feature that has an interaction between horsepower and fuel_type (either addition, multiplication, or some other approach) we can verify which interaction works best by observing the MI score of the new feature.
 
 
 
