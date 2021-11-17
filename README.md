@@ -48,3 +48,10 @@ Metric: Mutual Information
 <img src="images/par2_plot2.jpg" width = "500" >
 
 Observation: MI score for each feature in the dataset w.r.t the target. The higher the MI score, the better is that feature to predict the price of the car, i.e. the relationship is strong!
+
+
+<img src="images/par2_plot2.jpg" width = "500" >
+
+Observation: Plotting the relation between curb-weight and price by fitting a linear regression to curb-weight and price. As curb-weight increases, the price also increases. This shows strong relation, as also shown by Mutual Information Score
+
+<img src="images/par2_plot3.jpg" width = "500" >
