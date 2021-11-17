@@ -39,3 +39,12 @@ Dataset: Ames Housing
 <!-- <img src="images/model_architecture.png" width = "500" > -->
 
 Observation: We can observe the relationship between the feature "ExterQual" and the target, "SalePrice". We can interpret the plot as follows. Knowing the value of the ExterQual feature makes us more certain regarding the target. Because, each category in ExterQual roughly separates the range of Sale Price, helping the model to use this information to improve its performance.
+
+
+Dataset: Automobile_data
+
+Metric: Mutual Information
+
+<img src="images/par2_plot2.jpg" width = "500" >
+
+Observation: MI score for each feature in the dataset w.r.t the target. The higher the MI score, the better is that feature to predict the price of the car, i.e. the relationship is strong!
