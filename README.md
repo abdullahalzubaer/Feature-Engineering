@@ -63,4 +63,8 @@ Observation: As we have seen in the MI scores, fuel_type has a relatively low sc
 Action-> We can create another feature that has an interaction between horsepower and fuel_type (either addition, multiplication, or some other approach) we can verify which interaction works best by observing the MI score of the new feature.
 
 
+---
+
+Reference: https://www.kaggle.com/learn/feature-engineering?rvi=1
+
 
