@@ -54,3 +54,13 @@ Observation: MI score for each feature in the dataset w.r.t the target. The high
 
 Observation: Plotting the relation between curb-weight and price by fitting a linear regression to curb-weight and price. As curb-weight increases, the price also increases. This shows strong relation, as also shown by Mutual Information Score
 
+<img src="images/par2_plot4.jpg" width = "500" >
+
+In the figure above we are answering the question, how does the relationship between these horsepower and price change when fuel_type is taken into consideration?
+
+Observation: As we have seen in the MI scores, fuel_type has a relatively low score. But from the plot, we can see that two price populations are seperated by fuel_type with trends within the horsepower feature. This indicates that fuel_type contributes an interaction effect and might be important also.
+
+Action-> We can create another feature that has an interaction between horsepower and fuel_type (either addition, multiplication, or some other approach, we can verify which interaction works best by observing the MI score of the new feature.
+
+
+
