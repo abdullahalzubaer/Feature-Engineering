@@ -101,3 +101,46 @@ plt.savefig("par2_plot3.jpg",bbox_inches='tight', dpi=600 )
 
 sns.lmplot(data=df, x="horsepower", y="price", hue="fuel-type", height=6, aspect=1.5)
 plt.savefig("par2_plot4.jpg",bbox_inches='tight', dpi=600 )
+
+###
+
+df = pd.read_csv("/content/ames.csv")
+features = ["YearBuilt", "MoSold", "ScreenPorch", "LotFrontage", "GrLivArea", "GarageArea"]
+# plt.setp(plot.get_xticklabels(), rotation=90)
+a = sns.relplot(
+    x="value", y="SalePrice", col="variable",
+    data=df.melt(id_vars="SalePrice", value_vars=features), facet_kws=dict(sharex=False),
+    col_wrap=3
+);
+plt.savefig("par2_plot5.jpg",bbox_inches='tight', dpi=600 )
+
+def make_mi_scores(X,y):
+    X = X.copy()
+    for colname in X.select_dtypes(["object", "category"]):
+        X[colname], _ = X[colname].factorize()
+    discrete_features = [pd.api.types.is_integer_dtype(t) for t in X.dtypes] # creates a list of true false, needed for MI
+    mi_scores = mutual_info_regression(X, y, discrete_features=discrete_features, random_state=0)
+    mi_scores = pd.Series(mi_scores, name="MI Scores", index=X.columns)
+    return mi_scores.sort_values(ascending=False)
+
+def plot_mi_scores(scores):
+    width = np.arange(len(scores)) # how many y values we have
+    ticks = list(scores.index) # taking the name of the y values which isthe index of mi_score series
+    plt.barh(width,scores, color="tab:blue")
+    plt.yticks(width,ticks) # providing the name of the features on the y axis
+    plt.title("Mutual Information Scores")
+    
+plot_mi_scores(mi_scores.head(15))
+plt.savefig("par2_plot6.jpg",bbox_inches='tight', dpi=600 )
+
+sns.set(rc={"figure.figsize":(12, 4)})
+sns.catplot(x="BldgType", y="SalePrice", data=df, kind="boxen", height=6, aspect=1.5)
+plt.savefig("par2_plot7.jpg",bbox_inches='tight', dpi=600 )
+
+feature = "GrLivArea" # change it to other feature to witness if there is interaction or not
+
+sns.lmplot(
+    x=feature, y="SalePrice", hue="BldgType", col="BldgType",
+    data=df, scatter_kws={"edgecolor": 'w'}, col_wrap=3, height=4,
+)
+plt.savefig("par2_plot8.jpg",bbox_inches='tight', dpi=600 )
