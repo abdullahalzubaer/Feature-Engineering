@@ -76,8 +76,17 @@ Action -> Based on how strong the relations are we can be confident that these f
 
 Observation: Most informative features (top 15)
 
+There are times when domain knowledge can play an important role in selecting the features. For example, there is one feature for Ames dataset that has a low MI value, but according to the experts for Housing Price, Building Type (BldgType) is an important feature that determines the price of a house. We are going to examine this below.
 
+<img src="images/par2_plot7.jpg" width = "500" >
 
+Observation: BldgType indeed does not have strong relationships with the SalePrice.
+
+<img src="images/par2_plot8.jpg" width = "500" >
+
+Observation: BldgType shows a strong relationship when we have interaction between GrLivArea (which has a high MI score). Therefore, BldgType should be taken into consideration as an important feature.
+
+Action -> We can combine the top features with the other feature that we found through interaction to create new features.
 
 ---
 
