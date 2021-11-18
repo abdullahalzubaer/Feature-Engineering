@@ -72,6 +72,13 @@ Observation: In the above plot we can observe the relationship between the targe
 
 Action -> Based on how strong the relations are we can be confident that these features are important to predict the SalePrice
 
+<img src="images/par2_plot6.jpg" width = "500" >
+
+Observation: Most informative features (top 15)
+
+
+
+
 ---
 
 Reference: https://www.kaggle.com/learn/feature-engineering?rvi=1
