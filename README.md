@@ -62,6 +62,15 @@ Observation: As we have seen in the MI scores, fuel_type has a relatively low sc
 
 Action-> We can create another feature that has an interaction between horsepower and fuel_type (either addition, multiplication, or some other approach) we can verify which interaction works best by observing the MI score of the new feature.
 
+---
+
+Dataset: Ames. Target SalePrice
+
+<img src="images/par2_plot5.jpg" width = "500" >
+
+Observation: In the above plot we can observe the relationship between the target and 6 other features. This plot will help to show how these 6 features are related to the target. Ultimately we can say that the feature YearBuilt, GrLivArea, and GarageArea has a strong relationship with targets. These three feature follows a pattern that separates the target i.e. SalePrice
+
+Action -> Based on how strong the relations are we can be confident that these features are important to predict the SalePrice
 
 ---
 
