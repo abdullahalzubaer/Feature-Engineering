@@ -91,3 +91,13 @@ def plot_mi_scores(scores):
 plt.figure(figsize=(10, 6))
 plot_mi_scores(mi_scores)
 plt.savefig("par2_plot2.jpg", bbox_inches="tight", dpi=600)
+
+# sns.set(rc={"figure.figsize":(10, 6)}) #width=3, #height=4
+# sns.scatterplot(x="curb-weight", y="price", data=df)
+# plt.savefig("par2_plot3.jpg",bbox_inches='tight', dpi=600 )
+
+sns.lmplot(data=df, x="curb-weight", y="price", height=6, aspect=1.5)
+plt.savefig("par2_plot3.jpg",bbox_inches='tight', dpi=600 )
+
+sns.lmplot(data=df, x="horsepower", y="price", hue="fuel-type", height=6, aspect=1.5)
+plt.savefig("par2_plot4.jpg",bbox_inches='tight', dpi=600 )
