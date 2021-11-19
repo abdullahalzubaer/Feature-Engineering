@@ -88,6 +88,12 @@ Observation: BldgType shows a strong relationship when we have interaction betwe
 
 Action -> We can combine the top features with the other feature that we found through interaction to create new features.
 
+Part 3: Creating new features
+---
+
+
+
+
 ---
 
 Reference: https://www.kaggle.com/learn/feature-engineering?rvi=1
