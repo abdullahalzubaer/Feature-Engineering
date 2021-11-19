@@ -91,11 +91,20 @@ Action -> We can combine the top features with the other feature that we found t
 Part 3: Creating new features
 ---
 
+Approach 1:
+
 <img src="images/par3_plot1.jpg" width = "500" >
 
 Datasets: accidents
 
 Observation: If we log the value of the column WindSpeed then the highly skewed values have a normalizing effect. Making this feature more useful for the model
+
+Other Approaches:
+
+1. Count the presence of features in a df and use it as a new feature.
+
+
+
 
 
 ---
