@@ -144,3 +144,19 @@ sns.lmplot(
     data=df, scatter_kws={"edgecolor": 'w'}, col_wrap=3, height=4,
 )
 plt.savefig("par2_plot8.jpg",bbox_inches='tight', dpi=600 )
+
+# Part 3: Creating Features
+
+accidents = pd.read_csv("/content/accidents.csv")
+autos = pd.read_csv("/content/autos.csv")
+concrete = pd.read_csv("/content/concrete.csv")
+customer = pd.read_csv("/content/customer.csv")
+
+
+accidents["LogWindSpeed"] = accidents.WindSpeed.apply(np.log1p) # appliyng log(x+1) for all the values in LongWindSpeed
+
+fig, axs = plt.subplots(nrows=1,ncols=2, figsize=(8,4))
+fig.set_size_inches(10, 5)
+sns.kdeplot(accidents.WindSpeed, shade=True, ax=axs[0]).set_title("Raw Values")
+sns.kdeplot(accidents.LogWindSpeed, shade=True, ax=axs[1]).set_title("Log Scale")
+plt.savefig("par3_plot1.jpg",bbox_inches='tight', dpi=600 )
