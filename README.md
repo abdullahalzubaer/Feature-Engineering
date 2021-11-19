@@ -1,7 +1,7 @@
 # Feature-Engineering
 
 
-Part 1
+Part 1: Importance of good features
 ---
 
 
@@ -21,7 +21,7 @@ Error after creating 3 features: 7.8215
 
 Observation: Adding informative features can increase the performance of the model.
 
-Part 2
+Part 2: Identifying important features 
 ---
 
 Objective: Identifying and ranking relevant features w.r.t target
