@@ -1,10 +1,10 @@
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
-import seaborn as sns
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.feature_selection import mutual_info_regression
 from sklearn.model_selection import cross_val_score
+import matplotlib.pyplot as plt
+from sklearn.feature_selection import mutual_info_regression
+import seaborn as sns
+import numpy as np
 
 plt.style.use("ggplot")
 
@@ -160,3 +160,19 @@ fig.set_size_inches(10, 5)
 sns.kdeplot(accidents.WindSpeed, shade=True, ax=axs[0]).set_title("Raw Values")
 sns.kdeplot(accidents.LogWindSpeed, shade=True, ax=axs[1]).set_title("Log Scale")
 plt.savefig("par3_plot1.jpg",bbox_inches='tight', dpi=600 )
+
+# Creating Features
+
+# By aggregation
+roadway_features = ["Amenity", "Bump", "Crossing", "GiveWay",
+    "Junction", "NoExit", "Railway", "Roundabout", "Station", "Stop",
+    "TrafficCalming", "TrafficSignal"]
+accidents["RoadwayFeatures"] = accidents[roadway_features].sum(axis=1)
+accidents.head(n=2)
+
+components = [ "Cement", "BlastFurnaceSlag", "FlyAsh", "Water", "Superplasticizer", "CoarseAggregate", "FineAggregate"]
+
+# By splitting certain fatires
+customer[["Type", "Level"]] = (customer["Policy"].str.split(" ", expand=True)) # expand let us create two features
+customer[["Customer", "Policy", "Type", "Level" ]].head()
+concrete["Components"] = concrete[components].gt(0).sum(axis=1)
