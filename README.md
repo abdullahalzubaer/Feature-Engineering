@@ -101,9 +101,8 @@ Observation: If we log the value of the column WindSpeed then the highly skewed 
 
 Other Approaches:
 
-1. Count the presence of features in a df and use it as a new feature.
-
-
+1. Count the presence (exists or does not exist) of features in a df and use it as a new feature -> Will provide information regarding the necessity of having certain features.
+2. Making new features from the current ones (for example, date and time, Id, and others) either by splitting a feature or joining features.
 
 
 
