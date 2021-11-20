@@ -176,3 +176,6 @@ components = [ "Cement", "BlastFurnaceSlag", "FlyAsh", "Water", "Superplasticize
 customer[["Type", "Level"]] = (customer["Policy"].str.split(" ", expand=True)) # expand let us create two features
 customer[["Customer", "Policy", "Type", "Level" ]].head()
 concrete["Components"] = concrete[components].gt(0).sum(axis=1)
+
+customer["State_Gender"] = customer["State"] + '_' +customer["Gender"] # Creating new feature from State and Gender
+# Do the above if you believe there are informative interaction between these two features(remember you can check by MI and plots)
