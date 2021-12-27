@@ -103,6 +103,7 @@ Other Approaches:
 
 1. Count the presence (exists or does not exist) of features in a df and use it as a new feature -> Will provide information regarding the necessity of having certain features.
 2. Making new features from the current ones (for example, date and time, Id, and others) either by splitting a feature or joining features.
+3. By taking into consideration intercation between numerical and categorical feature (use dummy coding for categorical, then multiply the dummy coded categorical feature with the numerical feature)
 
 
 
