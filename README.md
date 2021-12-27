@@ -88,7 +88,7 @@ Observation: BldgType shows a strong relationship when we have interaction betwe
 
 Action -> We can combine the top features with the other feature that we found through interaction to create new features.
 
-Part 3: Creating new features
+Part 3: Creating new features: Mathematical Approach
 ---
 
 Approach 1:
@@ -105,6 +105,8 @@ Other Approaches:
 2. Making new features from the current ones (for example, date and time, Id, and others) either by splitting a feature or joining features.
 3. By taking into consideration intercation between numerical and categorical feature (use dummy coding for categorical, then multiply the dummy coded categorical feature with the numerical feature)
 
+Part 4: Creating new features: Clustering Approach
+---
 
 
 ---
