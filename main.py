@@ -191,3 +191,6 @@ X['Cluster'] = X['Cluster'].astype('category') # changing type to category or el
 plt.figure(figsize=(12,8))
 sns.scatterplot(data=X, x="Longitude", y="Latitude", hue="Cluster")
 
+X["MedHouseVal"] = df["MedHouseVal"] # adding one more feature to our X
+sns.catplot(data=X, x="MedHouseVal", y="Cluster", kind="boxen", height=6)
+
