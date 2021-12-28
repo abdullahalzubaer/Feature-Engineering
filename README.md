@@ -110,6 +110,10 @@ Part 4: Creating new features: Clustering Approach
 
 Idea: If we add the cluster labels as a feature to the dataset then it might help ML algorithm to find the pattern in the dataset more quickly.
 
+<img src="images/lesson4_plot1.jpg" width = "500" >
+
+Above figure: Clustering based on three features MedInc, Latitude and Longitude
+
 ---
 
 Reference: https://www.kaggle.com/learn/feature-engineering?rvi=1
