@@ -108,6 +108,7 @@ Other Approaches:
 Part 4: Creating new features: Clustering Approach
 ---
 
+Idea: If we add the cluster labels as a feature to the dataset then it might help ML algorithm to find the pattern in the dataset more quickly.
 
 ---
 
