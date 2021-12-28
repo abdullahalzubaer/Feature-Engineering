@@ -117,7 +117,7 @@ Above figure: Clustering based on three features MedInc, Latitude and Longitude
 Since the target of the dataset is MedHouseVal let's see if the cluster I created does indeed seperate the MedHouseVal properly - if they do then the cluster label as a 
 feature is indeed a good feature that should be added to the main dataset.
 
-<img src="images/lesson4_plot1.jpg" width = "500" >
+<img src="images/lesson4_plot2.jpg" width = "500" >
 
 And as I can observe they indeed seperate the target (i.e. MedHouseVal)
 
