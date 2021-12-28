@@ -179,3 +179,15 @@ concrete["Components"] = concrete[components].gt(0).sum(axis=1)
 
 customer["State_Gender"] = customer["State"] + '_' +customer["Gender"] # Creating new feature from State and Gender
 # Do the above if you believe there are informative interaction between these two features(remember you can check by MI and plots)
+
+# Part 4: Creating Features using Clustering method
+df = pd.read_csv("/content/housing.csv")
+X = df.loc[:,["MedInc", "Latitude", "Longitude"]]
+X.head()
+
+kmeans = KMeans(n_clusters=6)
+X["Cluster"] = kmeans.fit_predict(X)
+X['Cluster'] = X['Cluster'].astype('category') # changing type to category or else it is int
+plt.figure(figsize=(12,8))
+sns.scatterplot(data=X, x="Longitude", y="Latitude", hue="Cluster")
+
