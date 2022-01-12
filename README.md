@@ -123,8 +123,26 @@ feature is indeed a good feature that should be added to the main dataset.
 And as I can observe they indeed seperate the target (i.e. MedHouseVal)
 
 
+Part 4: Creating new features: PCA Approach
+---
+
+Idea: instead of describing the data using the given features we try to desribe the data using features that concretely defines the variation of the data. The new axis (PC axis) will be then the new features! Also, remember there will be as many PC as there are features that we had in the original dataset (assuming I am executing PCA on the whole dataset)
+
+Rest of the code and explanation are in the colab notebook (link at the top!)
+
+
+Part 5: Target Encoding
+
+"A target encoding is any kind of encoding that replaces a feature's categories with some number derived from the target."
+
+Rest of the code and explanation are in the colab notebook (link at the top!)
+
+
+
+Done!
 
 ---
+
 
 Reference: https://www.kaggle.com/learn/feature-engineering?rvi=1
 
